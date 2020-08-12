@@ -1,11 +1,11 @@
 REM    Copyright 2014 Steve Francia
-REM 
+REM
 REM    Licensed under the Apache License, Version 2.0 (the "License");
 REM    you may not use this file except in compliance with the License.
 REM    You may obtain a copy of the License at
-REM 
+REM
 REM        http://www.apache.org/licenses/LICENSE-2.0
-REM 
+REM
 REM    Unless required by applicable law or agreed to in writing, software
 REM    distributed under the License is distributed on an "AS IS" BASIS,
 REM    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -46,5 +46,5 @@ call copy "%APP_PATH%\.vimrc.bundles.fork" "%HOME%\.vimrc.bundles.fork"
 call copy "%APP_PATH%\.vimrc.before" "%HOME%\.vimrc.before"
 call copy "%APP_PATH%\.vimrc.before.fork" "%HOME%\.vimrc.before.fork"
 
-@if not exist "%HOME%/.vim/bundle/vundle" call git clone https://github.com/gmarik/vundle.git "%HOME%/.vim/bundle/vundle"
-call vim -u "%APP_PATH%/.vimrc.bundles" - +BundleInstall! +BundleClean +qall
+@if not exist "%HOME%/.vim/bundle/vim-plug" call git clone https://github.com/junegunn/vim-plug.git "%HOME%/.vim/bundle/vim-plug"
+call vim -u "%APP_PATH%/.vimrc.bundles" - +PlugInstall! +PlugClean +qall
